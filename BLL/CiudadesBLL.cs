@@ -12,7 +12,7 @@ namespace JordyP1_Apl.BLL{
 
         public static bool Guardar(Ciudades ciudades){
             
-            if(!Existe(ciudades.CiudadesId))
+            if(!Existe(ciudades.CiudadId))
                 return Insertar(ciudades);
             
             else
@@ -88,6 +88,67 @@ namespace JordyP1_Apl.BLL{
             return paso;
         }
 
-        
+        public static Ciudades Buscar(int id){
+
+            Contexto contexto = new Contexto();
+            Ciudades ciudades = new Ciudades();
+
+            try{
+                ciudades= contexto.Ciudades.Find(id);
+
+            }
+            catch(Exception){
+                throw;
+
+            }
+            finally{
+                contexto.Dispose();
+
+            }
+
+            return ciudades;
+        }
+
+        public static bool Existe(int id){
+
+            Contexto contexto = new Contexto();
+            bool encontrado = false;
+
+            try{
+                encontrado= contexto.Ciudades.Any(encontrado=> encontrado.CiudadId==id);
+
+            }
+            catch(Exception){
+                throw;
+            }
+            finally{
+                contexto.Dispose();
+
+            }
+
+            return encontrado;
+
+        }
+
+        public static List<Ciudades> GetList(Expression<Func<Ciudades , bool>> criterio){
+
+            List<Ciudades> lista = new List<Ciudades>();
+            Contexto contexto = new Contexto();
+
+            try{
+                lista = contexto.Ciudades.Where(criterio).ToList();
+
+            }
+            catch(Exception){
+                throw;
+
+            }
+            finally{
+                contexto.Dispose();
+
+            }
+
+            return lista;
+        }
     }
 }

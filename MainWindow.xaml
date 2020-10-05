@@ -5,18 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JordyP1_Apl"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="280" Width="444">
     <Grid>
         <StackPanel>
             <Menu Height = "20" VerticalAlignment="Top">
                 <MenuItem Header= "Registros">
-                    <MenuItem x:Name="RegistroPersona" Header="Registro Persona" ></MenuItem>
-                    <MenuItem x:Name="RegistroPrestamo" Header="Registro Prestamo" ></MenuItem>
+                    <MenuItem x:Name="RegistroCiudades" Header="Registro Ciudades" Click= "RegistroCiudadesButton_Click"></MenuItem>
                 </MenuItem>
 
                 <MenuItem Header= "Consultas">
-                    <MenuItem x:Name="ConsultaPersona" Header="Consulta Persona" ></MenuItem>
-                    <MenuItem x:Name="ConsultaPrestamo" Header="Consulta Prestamo"></MenuItem>
+                    <MenuItem x:Name="ConsultaCiudades" Header="Consulta Ciudades" ></MenuItem>
                 </MenuItem>
             </Menu>
         </StackPanel>       
