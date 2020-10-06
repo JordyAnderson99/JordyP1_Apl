@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JordyP1_Apl.UI.Consulta"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Consulta de Ciudades" Height="450" Width="800">
     <Grid>
         <StackPanel Margin= "-120,20,-1,-1"  VerticalAlignment="Center" HorizontalAlignment="Center">
                         
             <!--Boton Buscar-->
-            <!-- <Button x:Name ="BuscarButton" Margin="680,-60,0,0" Width = "120" Height = "40" Content="   Buscar" Click="BuscarButton_Click"/>  -->
+            <Button x:Name ="BuscarButton" Margin="680,-60,0,0" Width = "120" Height = "40" Content="   Buscar" Click="BuscarButton_Click"/>
             <Image Source= "/Imagenes/Buscar.png" Width="30" Height= "30" Margin="610,-60,0,0"/>
             
             <!-- Filtro -->

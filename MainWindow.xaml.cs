@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using JordyP1_Apl.UI.Registro;
-//using JordyP1_Apl.UI.Consulta;
+using JordyP1_Apl.UI.Consulta;
 
 namespace JordyP1_Apl
 {
@@ -33,9 +33,9 @@ namespace JordyP1_Apl
         }
 
 
-        /*private void ConsultaCiudadesButton_Click(object sender, RoutedEventArgs e){
-           cProductos cPro = new cProductos();
-            cPro.Show();
-        }*/
+        private void ConsultaCiudadesButton_Click(object sender, RoutedEventArgs e){
+           cCiudades cCiu = new cCiudades();
+            cCiu.Show();
+        }
     }
 }
