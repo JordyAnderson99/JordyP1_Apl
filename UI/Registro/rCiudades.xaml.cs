@@ -39,8 +39,16 @@ namespace JordyP1_Apl.UI.Registro
 
             if(NombreTextBox.Text.Length ==0){
                 esValido = false;
+
                 MessageBox.Show("Transaccion Fallida" , "Fallo", 
                 MessageBoxButton.OK, MessageBoxImage.Warning);
+                
+            }
+            if(ciudades.CiudadId==0){
+                MessageBox.Show("No puede dejar el Campo Id Vacio", "Fallo",  MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            if(ciudades.Nombre== null){
+                MessageBox.Show("No puede dejar el Campo de Nombre Vacio", "Fallo",  MessageBoxButton.OK, MessageBoxImage.Error);
             }
             
             return esValido;
@@ -74,7 +82,8 @@ namespace JordyP1_Apl.UI.Registro
                 Limpiar();
                 MessageBox.Show("Transaccion exitosa!" , "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
             }
-            else{
+            
+            else if(paso == CiudadesBLL.Guardar(ciudades)){
                 MessageBox.Show("Transaccion Fallida", "Fallo",  MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }

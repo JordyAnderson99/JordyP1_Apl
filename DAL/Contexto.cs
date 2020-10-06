@@ -9,7 +9,7 @@ namespace JordyP1_Apl.DAL{
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
 
-            optionsBuilder.UseSqlite(@" Data Source = Data/Ciudades");
+            optionsBuilder.UseSqlite(@" Data Source = Data/Ciudades.db");
         }
     }
 }
